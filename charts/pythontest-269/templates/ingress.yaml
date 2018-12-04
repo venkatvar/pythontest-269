@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: {{ template "fullname" . }}
   labels:
+    snappyflow/compname: pythontest
+    snappyflow/appname: produc-stage
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 spec:
   rules:
